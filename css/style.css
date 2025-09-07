@@ -15,6 +15,13 @@
   --themebtnhoverborder: #fff;
   --refundhover: #9E4B64;
   --refund: #FA789F;
+
+  /* Fluid typography scale */
+  --fs-small: clamp(0.8rem, 0.75rem + 0.3vw, 0.95rem);
+  --fs-base: clamp(1rem, 0.9rem + 0.5vw, 1.2rem);
+  --fs-medium: clamp(1.2rem, 1rem + 0.8vw, 1.5rem);
+  --fs-large: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+  --fs-xlarge: clamp(2rem, 1.5rem + 1.5vw, 3rem);
 }
 
 :root.dark-mode {
@@ -67,6 +74,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  font-size: var(--fs-base);
 }
 
 header {
@@ -80,7 +88,7 @@ header {
 
 header h1 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: var(--fs-large);
 }
 
 header button {
@@ -92,6 +100,7 @@ header button {
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.2s;
+  font-size: var(--fs-small);
 }
 
 #themeToggle {
@@ -153,7 +162,7 @@ header button:hover {
   padding: 20px;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: var(--fs-medium);
   text-align: center;
   transition: background 0.2s, opacity 0.2s, transform 0.1s;
   white-space: normal;
@@ -191,6 +200,7 @@ header button:hover {
   pointer-events: none;
   text-align: center;
   color: white;
+  font-size: var(--fs-small);
 }
 
 .randomizer-controls {
@@ -215,7 +225,7 @@ header button:hover {
   border: none;
   color: white;
   padding: 20px;
-  font-size: 1.2rem;
+  font-size: var(--fs-base);
   line-height: 1.4;
   border-radius: 8px;
   cursor: pointer;
@@ -241,7 +251,7 @@ header button:hover {
   position: absolute;
   top: 4px;
   right: 8px;
-  font-size: 0.8rem;
+  font-size: var(--fs-small);
   font-weight: normal;
   color: white;
 }
@@ -250,7 +260,7 @@ header button:hover {
   flex: 0 0 auto;
   width: 60px;
   padding: 5px 0;
-  font-size: 30px;
+  font-size: var(--fs-medium);
   font-weight: bolder;
 }
 
@@ -263,6 +273,7 @@ header button:hover {
   display: flex;
   flex-direction: column;
   height: 100%;
+  font-size: var(--fs-small);
 }
 
 .tabs,
@@ -283,6 +294,7 @@ header button:hover {
   color: var(--text);
   cursor: pointer;
   transition: background 0.1s;
+  font-size: var(--fs-small);
 }
 
 .tabs button:hover,
@@ -301,7 +313,7 @@ header button:hover {
   flex: 1;
   overflow-y: auto;
   padding: 15px;
-  font-size: 0.9rem;
+  font-size: var(--fs-small);
 }
 
 #inventoryList div {
@@ -338,7 +350,7 @@ header button:hover {
   padding: 3px 6px;
   cursor: pointer;
   border-radius: 3px;
-  font-size: 0.8rem;
+  font-size: var(--fs-small);
   transition: background 0.2s;
 }
 
@@ -353,7 +365,7 @@ header button:hover {
   padding: 3px 6px;
   cursor: pointer;
   border-radius: 3px;
-  font-size: 0.8rem;
+  font-size: var(--fs-small);
   transition: background 0.2s;
   margin-left: 6px;
 }
@@ -372,27 +384,6 @@ header button:hover {
   color: var(--accent);
 }
 
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2000;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
-.popup-overlay.show {
-  opacity: 1;
-  pointer-events: auto;
-}
-
 .popup {
   background: var(--card);
   padding: 20px;
@@ -406,11 +397,16 @@ header button:hover {
   transform: scale(0.8);
   opacity: 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  font-size: var(--fs-small);
 }
 
 .popup.show {
   transform: scale(1);
   opacity: 1;
+}
+
+.popup .popup-title {
+  font-size: var(--fs-medium);
 }
 
 .multi-roll-popup {
@@ -423,146 +419,15 @@ header button:hover {
   text-align: left;
   font-family: "Arial", sans-serif;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
-
-.multi-roll-popup .popup-content {
-  cursor: pointer;
-}
-
-.multi-roll-popup ul {
-  list-style: disc inside;
-  padding-left: 10px;
-}
-
-.multi-roll-popup li {
-  margin-bottom: 5px;
-}
-
-.multi-roll-popup p {
-  margin: 5px 0;
-  font-style: italic;
-  text-align: center;
+  font-size: var(--fs-small);
 }
 
 .multi-roll-popup .popup-title {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-  text-align: center;
+  font-size: var(--fs-medium);
 }
 
 .multi-roll-popup .roll-list li {
-  padding: 6px 0;
-}
-
-.multi-roll-popup .roll-separator {
-  border: 0;
-  border-top: 2px solid var(--accent);
-  margin: 10px 0;
-}
-
-.multi-roll-popup .click-to-close {
-  text-align: center;
-  margin-top: 10px;
-  font-style: italic;
-  color: #3a3a3a;
-  font-weight: bold;
-}
-
-.video-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 90vw;
-  padding-bottom: 56.25%;
-  height: 0;
-  margin: 20px auto;
-}
-
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-.popup.intro-popup {
-  max-width: 95vw;
-  width: auto;
-  height: auto;
-  padding: 20px;
-  background: var(--card);
-  color: var(--text);
-  border-radius: 12px;
-  box-sizing: border-box;
-  overflow-x: auto;
-  text-align: center;
-}
-
-.popup-overlay {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-}
-
-.popup.intro-popup p,
-.popup.intro-popup ul {
-  word-wrap: break-word;
-}
-
-.roll-header-btn {
-  background: var(--accent);
-  color: white;
-  border: none;
-  padding: 10px 14px;
-  margin-right: 8px;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.roll-header-btn:hover {
-  background: #6541A5;
-}
-
-@keyframes slideFadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.inventory-item.animate {
-  animation: slideFadeIn 0.1s ease forwards;
-}
-
-#inventoryList::-webkit-scrollbar {
-  width: 8px;
-}
-
-#inventoryList::-webkit-scrollbar-thumb {
-  background: var(--accent);
-  border-radius: 4px;
-}
-
-#inventoryList::-webkit-scrollbar-track {
-  background: var(--card);
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translate(-50%, -60%); }
-  to { opacity: 0.95; transform: translate(-50%, -50%); }
-}
-
-@keyframes fadeOut {
-  from { opacity: 0.95; transform: translate(-50%, -50%); }
-  to { opacity: 0; transform: translate(-50%, -40%); }
+  font-size: var(--fs-small);
 }
 
 /* ---------------------------
@@ -610,12 +475,12 @@ header button:hover {
   }
 
   header h1 {
-    font-size: 1.2rem;
+    font-size: var(--fs-medium);
   }
 
   header button {
     padding: 6px 10px;
-    font-size: 0.9rem;
+    font-size: var(--fs-small);
   }
 
   .button-grid {
@@ -625,7 +490,7 @@ header button:hover {
   }
 
   .button-grid button {
-    font-size: 1rem;
+    font-size: var(--fs-small);
     padding: 15px;
   }
 
@@ -635,12 +500,12 @@ header button:hover {
   }
 
   .roll-buttons button {
-    font-size: 1rem;
+    font-size: var(--fs-small);
     padding: 15px;
   }
 
   .inventory {
-    font-size: 0.85rem;
+    font-size: var(--fs-small);
   }
 
   .popup {
