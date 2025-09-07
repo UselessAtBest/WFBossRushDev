@@ -1,0 +1,11 @@
+{
+  "name": "PlayerSeven",
+  "time": "22-14",
+  "video": "https://youtu.be/example",
+  "socials": {
+    "socials1": "https://twitter.com/playerone",
+    "socials1_Display": "Twitter",
+    "socials2": "https://instagram.com/playerone",
+    "socials2_Display": "Instagram"
+  }
+}

@@ -1,0 +1,33 @@
+{
+    "categories": [
+      {
+        "folder": "category1",
+        "displayName": "Normal Mode",
+        "runs": [
+          "run01.json",
+          "run02.json",
+          "run03.json",
+          "run04.json",
+          "run05.json"
+        ]
+      },
+      {
+        "folder": "category2",
+        "displayName": "SP Hard Mode",
+        "runs": [
+          "run01.json",
+          "run02.json"
+
+        ]
+      },
+      {
+        "folder": "category3",
+        "displayName": "Sliv Mode",
+        "runs": [
+          "run01.json",
+          "run02.json"
+        ]
+      }
+    ]
+  }
+  

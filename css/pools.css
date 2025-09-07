@@ -1,0 +1,42 @@
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: var(--bg);
+    color: var(--text);
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  header button {
+    padding: 8px 12px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  header button:hover {
+    opacity: 0.8;
+  }
+  
+  .pool-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .pool-list li {
+    padding: 6px 0;
+  }
+  

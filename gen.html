@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Leader board file gen</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 20px;
+    }
+
+    h2, h3 {
+      color: var(--text);
+    }
+
+    .field {
+      margin-bottom: 12px;
+    }
+
+    label {
+      display: inline-block;
+      width: 150px;
+      color: var(--text);
+    }
+
+    input {
+      padding: 6px 8px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--card);
+      color: var(--text);
+    }
+
+    input:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+
+    .times-container {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      gap: 12px;
+      margin-top: 15px;
+      max-width: 800px;
+      justify-content: center;
+    }
+
+
+    .animated-rainbow {
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    indigo,
+    violet,
+    red
+  );
+  background-size: 45% 25%;   
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow 5s linear infinite;
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+
+    .time-box input {
+      width: 70%; 
+    }
+
+    .social-field input:first-child { 
+      flex: 2;
+    }
+
+    .social-field input:last-child { 
+      flex: 1;
+    }
+
+    .social-field {
+      display: flex;
+      gap:10px;
+      align-items: center;
+      max-width: 40%;
+    }
+
+    .button-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+
+    button {
+      padding: 8px 14px;
+      background: var(--card);
+      max-width: 20%;
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: bg 0.2s;
+    }
+
+    button:hover {
+      background: var(--accent);
+      color: white;
+    }
+
+    input, textarea {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+    textarea {
+      width: 40%;
+      height: 220px;
+      margin-top: 15px;
+      padding: 10px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--card);
+      color: var(--text);
+      font-family: monospace;
+    }
+
+
+    .time-input {
+  text-align: center;
+}
+
+
+  </style>
+</head>
+<body>
+    <h2 class="animated-rainbow">Leader board file gen</h2>
+
+  <div class="field">
+    <label for="name">Name:</label>
+    <input type="text" id="name">
+  </div>
+
+  <div class="field">
+    <label for="video">Video/VOD link:</label>
+    <input type="text" id="video">
+  </div>
+
+  <div id="socials-container">
+    <div class="field social-field">
+      <label>Social 1:</label>
+      <input type="text" placeholder="Display Name">
+      <input type="text" placeholder="Social Link">
+    </div>
+  </div>
+
+  <button type="button" onclick="addSocial()">Add Social</button>
+
+  <h3 class="animated-rainbow">Times</h3>
+  <div class="times-container" id="times-container">
+    <div class="time-box"><label>   Fragmented One:     </label><input type="text" maxlength="5" class="time-input" placeholder="MM:SS"></div>
+    <div class="time-box"><label>   Captain Vor     </label><input type="text" maxlength="5" class="time-input" placeholder="MM:SS"></div>
+    <div class="time-box"><label>   Jackal     </label><input type="text" maxlength="5" class="time-input" placeholder="MM:SS"></div>
+    <div class="time-box"><label>   H09 Tank:     </label><input type="text" maxlength="5" class="time-input" placeholder="MM:SS"></div>
+    <div class="time-box"><label>   Lech Krill:     </label><input type="text" maxlength="5" class="time-input" placeholder="MM:SS"></div>
+    <div class="time-box"><label>   Lephantis:     </label><input type="text" maxlength="5" class="time-input" placeholder="MM:SS"></div>
+    <div class="time-box"><label>   Sergeant:     </label><input type="text" maxlength="5" class="time-input" placeholder="MM:SS"></div>
+    <div class="time-box"><label>   Kril & Vor:     </label><input type="text" maxlength="5" class="time-input" placeholder="MM:SS"></div>
+    <div class="time-box"><label>   Salad V:     </label><input type="text" maxlength="5" class="time-input" placeholder="MM:SS"></div>
+    <div class="time-box"><label>   The Raptor:    </label><input type="text" maxlength="5" class="time-input" placeholder="MM:SS"></div>
+    <div class="time-box"><label>   Sargus Ruk:    </label><input type="text" maxlength="5" class="time-input" placeholder="MM:SS"></div>
+    <div class="time-box"><label>   Tyl Regor:    </label><input type="text" maxlength="5" class="time-input" placeholder="MM:SS"></div>
+    <div class="time-box"><label>   Hyena Pack:    </label><input type="text" maxlength="5" class="time-input" placeholder="MM:SS"></div>
+    <div class="time-box"><label>   Ambulas:    </label><input type="text" maxlength="5" class="time-input" placeholder="MM:SS"></div>
+    <div class="time-box"><label>   Kela De Thaym:    </label><input type="text" maxlength="5" class="time-input" placeholder="MM:SS"></div>
+    <div class="time-box"><label>   Zealoid Prelate:    </label><input type="text" maxlength="5" class="time-input" placeholder="MM:SS"></div>
+ </div>
+
+  <div class="button-row">
+    <button type="button" onclick="generateJSON()">Generate JSON</button>
+    <button type="button" onclick="copyJSON()">Copy JSON</button>
+    <button type="button" onclick="downloadJSON()">Download JSON</button>
+  </div>
+
+  <textarea id="output" readonly></textarea>
+
+  <div id="popup-overlay" class="popup-overlay">
+    <div class="popup">
+      <p id="popup-message"></p>
+      <button onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    let socialCount = 1;
+
+    function addSocial() {
+      socialCount++;
+      const container = document.getElementById("socials-container");
+      const div = document.createElement("div");
+      div.classList.add("field", "social-field");
+      div.innerHTML = `
+        <label>Social ${socialCount}:</label>
+        <input type="text" placeholder="Display Name">
+        <input type="text" placeholder="Social Link">
+      `;
+      container.appendChild(div);
+    }
+
+    function parseTime(str) {
+      if (!str) return 0;
+      const parts = str.split(":").map(Number);
+      if (parts.length === 2) return parts[0] * 60 + parts[1];
+      return Number(str) || 0;
+    }
+
+    function formatTime(totalSeconds) {
+      const mins = Math.floor(totalSeconds / 60);
+      const secs = totalSeconds % 60;
+      return mins + "-" + secs.toString().padStart(2, "0");
+    }
+
+    function generateJSON() {
+      const name = document.getElementById("name").value.trim() || "N/A";
+      const video = document.getElementById("video").value.trim() || "N/A";
+
+      const socialFields = document.querySelectorAll("#socials-container .social-field");
+      const socials = {};
+      socialFields.forEach((field, i) => {
+        const inputs = field.querySelectorAll("input");
+        const display = inputs[0].value.trim() || "N/A";
+        const link = inputs[1].value.trim() || "N/A";
+        socials[`socials${i+1}`] = link;
+        socials[`socials${i+1}_Display`] = display;
+      });
+
+      const timeInputs = document.querySelectorAll("#times-container input");
+      let totalSeconds = 0;
+      timeInputs.forEach(input => {
+        totalSeconds += parseTime(input.value.trim());
+      });
+
+      const totalTime = formatTime(totalSeconds);
+
+      const result = { name, time: totalTime, video, socials };
+      document.getElementById("output").value = JSON.stringify(result, null, 2);
+    }
+
+    function copyJSON() {
+      const output = document.getElementById("output");
+      output.select();
+      document.execCommand("copy");
+      alert("JSON copied to clipboard!");
+    }
+
+    function downloadJSON() {
+      const output = document.getElementById("output").value;
+      if (!output) {
+        alert("Generate JSON first!");
+        return;
+      }
+      const obj = JSON.parse(output);
+      const filename = `${obj.name || "output"}+${obj.time}.json`;
+      const blob = new Blob([output], {type: "application/json"});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    document.querySelectorAll('.time-input').forEach(input => {
+  input.addEventListener('input', () => {
+    let val = input.value.replace(/[^0-9]/g, '');
+    if (val.length > 2) {
+      val = val.slice(0,2) + ':' + val.slice(2,4); 
+    }
+
+    input.value = val;
+  });
+});
+    
+    
+  </script>
+
+
+</body>
+</html>
+
+

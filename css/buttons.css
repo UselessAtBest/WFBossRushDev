@@ -1,0 +1,105 @@
+
+.button-grid button {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    padding: 0px;
+    border-radius: 30px;
+    border: 2px solid #2a2a2a;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: end;
+    font-size: 1rem;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+  }
+  
+  .button-grid button:hover {
+    transform: scale(1.02);
+  }
+  
+
+  .button-grid .tier-1-label {
+    font-weight: normal;
+    font-size: 1rem;
+    color: #401D87; 
+  }
+  
+  .button-grid .tier-2-label {
+    font-weight: normal;
+    font-size: 1rem;
+    color: #401D87; 
+  }
+  
+  .button-grid .tier-3-label {
+    font-weight: normal;
+    font-size: 1rem;
+    color: #401D87; 
+  }
+  
+  .button-grid .tier-4-label {
+    font-weight: normal;
+    font-size: 1rem;
+    color: #401D87; 
+  }
+  
+ 
+.button-grid .tier-1-btn {
+  background-color: var(--tier-1-bg);
+  border-color: var(--tier-1-border);
+}
+  
+  .button-grid .tier-2-btn {
+    background-color: #1E1E1E;
+    border-color: #401D87;
+  }
+  
+  .button-grid .tier-3-btn {
+    background-color: #1E1E1E;
+    border-color: #401D87;
+  }
+  
+  .button-grid .tier-4-btn {
+    background-color: #1E1E1E;
+    border-color: #401D87;
+  }
+  
+
+  .popup .tier-1-popup {
+    color: #ffd700;
+    font-weight: bold;
+  }
+  
+  .popup .tier-2-popup {
+    color: #00bfff;
+    font-weight: bold;
+  }
+  
+  .popup .tier-3-popup {
+    color: #ff6347;
+    font-weight: bold;
+  }
+  
+  .popup .tier-4-popup {
+    color: #32cd32;
+    font-weight: bold;
+  }
+  
+ 
+  .button-grid .button-name {
+    font-size: 1.6rem;
+    color: #ccc;
+    margin-bottom: 4px;
+  }
+  
+
+.button-grid button .button-name {
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.45); 
+  padding: 4px 8px;               
+  border-radius: 10px;             
+  color: white;                   
+}
+     

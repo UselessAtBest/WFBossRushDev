@@ -1,0 +1,219 @@
+[
+  {
+    "name": "Fragmented One",
+    "label": "<b> SP Only  </b>",
+    "popupMessage": "",
+    "image": "../img/fragmentedone.png",
+    "tier": 1,
+    "rolls": { "poolNormal": 5, "poolLimited": 3 },
+    "class": {
+      "button": ["tier-1-btn"],
+      "label": ["tier-1-label"],
+      "text": ["tier-1-popup"]
+    },
+    "sp": true
+  },
+  {
+    "name": "Captain Vor",
+    "label": " Mercury ",
+    "popupMessage": "",
+    "image": "../img/vor.png",
+    "tier": 1,
+    "rolls": { "poolNormal": 3, "poolLimited": 1 },
+    "class": {
+      "button": ["tier-1-btn"],
+      "label": ["tier-1-label"],
+      "text": ["tier-1-popup"]
+    }
+  },
+  {
+    "name": "The Jackal",
+    "label": " Venus ",
+    "popupMessage": "",
+    "image": "../img/jackal.png",
+    "tier": 1,
+    "rolls": { "poolNormal": 3, "poolLimited": 1 },
+    "class": {
+      "button": ["tier-1-btn"],
+      "label": ["tier-1-label"],
+      "text": ["tier-1-popup"]
+    }
+  },
+  {
+    "name": "H09 Efervon",
+    "label": " <b>  SP Only </b>",
+    "popupMessage": "",
+    "image": "../img/h09.png",
+    "tier": 1,
+    "rolls": { "poolNormal": 5, "poolLimited": 3 },
+    "class": {
+      "button": ["tier-1-btn"],
+      "label": ["tier-1-label"],
+      "text": ["tier-1-popup"]
+    },
+    "sp": true
+  },
+  {
+    "name": "Lech Kril",
+    "label": "Mars",
+    "popupMessage": "Big Beans",
+    "image": "../img/Kril.png",
+    "tier": 1,
+    "rolls": { "poolNormal": 3, "poolLimited": 1 },
+    "class": {
+      "button": ["tier-1-btn"],
+      "label": ["tier-1-label"],
+      "text": ["tier-1-popup"]
+    }
+  },
+  {
+    "name": "Lephantis",
+    "label": " Deimos ",
+    "popupMessage": "",
+    "image": "../img/lephantis.png",
+    "tier": 1,
+    "rolls": { "poolNormal": 5, "poolLimited": 3 },
+    "class": {
+      "button": ["tier-1-btn"],
+      "label": ["tier-1-label"],
+      "text": ["tier-1-popup"]
+    }
+  },
+  {
+    "name": "The Sergeant",
+    "label": " Phobos ",
+    "popupMessage": "",
+    "image": "../img/sergeant.png",
+    "tier": 1,
+    "rolls": { "poolNormal": 3, "poolLimited": 1 },
+    "class": {
+      "button": ["tier-1-btn"],
+      "label": ["tier-1-label"],
+      "text": ["tier-1-popup"]
+    }
+  },
+  {
+    "name": "Kril & Vor",
+    "label": " Ceres ",
+    "popupMessage": "",
+    "image": "../img/VorKril.png",
+    "tier": 1,
+    "rolls": { "poolNormal": 3, "poolLimited": 1 },
+    "class": {
+      "button": ["tier-1-btn"],
+      "label": ["tier-1-label"],
+      "text": ["tier-1-popup"]
+    }
+  },
+  {
+    "name": "Salad V",
+    "label": " Jupiter ",
+    "popupMessage": "",
+    "image": "../img/aladv.png",
+    "tier": 1,
+    "rolls": { "poolNormal": 4, "poolLimited": 2 },
+    "class": {
+      "button": ["tier-1-btn"],
+      "label": ["tier-1-label"],
+      "text": ["tier-1-popup"]
+    }
+  },
+  {
+    "name": "The Raptor",
+    "label": " Europa ",
+    "popupMessage": "",
+    "image": "../img/raptor.png",
+    "tier": 1,
+    "rolls": { "poolNormal": 4, "poolLimited": 2 },
+    "class": {
+      "button": ["tier-1-btn"],
+      "label": ["tier-1-label"],
+      "text": ["tier-1-popup"]
+    }
+  },
+  {
+    "name": "Sargus Ruk",
+    "label": " Saturn ",
+    "popupMessage": "",
+    "image": "../img/ruk.png",
+    "tier": 1,
+    "rolls": { "poolNormal": 4, "poolLimited": 2 },
+    "class": {
+      "button": ["tier-1-btn"],
+      "label": ["tier-1-label"],
+      "text": ["tier-1-popup"]
+    }
+  },
+  {
+    "name": "Tyl Regor",
+    "label": " Uranus ",
+    "popupMessage": "",
+    "image": "../img/regor.png",
+    "tier": 1,
+    "rolls": { "poolNormal": 5, "poolLimited": 3 },
+    "class": {
+      "button": ["tier-1-btn"],
+      "label": ["tier-1-label"],
+      "text": ["tier-1-popup"]
+    }
+  },
+  {
+    "name": "Hyena Pack",
+    "label": " Neptune ",
+    "popupMessage": "",
+    "image": "../img/hyena.png",
+    "tier": 1,
+    "rolls": { "poolNormal": 5, "poolLimited": 3 },
+    "class": {
+      "button": ["tier-1-btn"],
+      "label": ["tier-1-label"],
+      "text": ["tier-1-popup"]
+    }
+  },
+  {
+    "name": "Ambulas",
+    "label": " Pluto ",
+    "popupMessage": "",
+    "image": "../img/ambulas.png",
+    "tier": 1,
+    "rolls": { "poolNormal": 5, "poolLimited": 3 },
+     "class": {
+      "button": ["tier-1-btn"],
+      "label": ["tier-1-label"],
+      "text": ["tier-1-popup"]
+    }
+  },
+  {
+    "name": "Kela De Thaym",
+    "label": " Sedna ",
+    "popupMessage": "",
+    "image": "../img/kela.png",
+    "tier": 1,
+    "rolls": { "poolNormal": 5, "poolLimited": 3 },
+    "class": {
+      "button": ["tier-1-btn"],
+      "label": ["tier-1-label"],
+      "text": ["tier-1-popup"]
+    }
+  },
+  {
+    "name": "Zealoid Prelate",
+    "label": " Deimos ",
+    "popupMessage": "",
+    "image": "../img/zealoid.png",
+    "tier": 1,
+    "rolls": { "poolNormal": 5, "poolLimited": 3 },
+    "class": {
+      "button": ["tier-1-btn"],
+      "label": ["tier-1-label"],
+      "text": ["tier-1-popup"]
+    }
+  }
+
+]
+
+
+
+
+
+

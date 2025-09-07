@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pools</title>
+  <link rel="stylesheet" href="pools.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #121212;
+      color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .pools-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .pool-column {
+      flex: 1;
+      min-width: 350px;
+      background: #1e1e1e;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #2a2a2a;
+    }
+    .pool-column {
+      flex: 1;
+      min-width: 250px;      
+      max-width: 25vw;        
+      background: #1e1e1e;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #2a2a2a;
+    }
+    .pool-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .pool-list li {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 0;
+      border-bottom: 1px solid #2a2a2a;
+      font-family: monospace;
+    }
+    .pool-list li span {
+      display: inline-block;
+      width: 23%;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+<header>
+        <nav class="nav-left">
+        <button onclick="window.location.href='../index.html?noIntro=1'">Home</button>
+        <button onclick="window.location.href='/WFBossRush/leaderboard/leaderboard.html'">Leaderboard</button>
+        <button onclick="window.location.href='/WFBossRush/data/pools.html'">Pools</button>
+        </nav>
+        <div class="nav-right">
+          <button id="themeToggle">🌙</button>
+        </div>
+      </header>
+
+
+  <h1>Item Pools</h1>
+  <div class="pools-container">
+    <div class="pool-column">
+      <h2>Normal Pool</h2>
+      <ul id="normalPool" class="pool-list"></ul>
+    </div>
+    <div class="pool-column">
+      <h2>Limited Pool</h2>
+      <ul id="limitedPool" class="pool-list"></ul>
+    </div>
+  </div>
+
+  <script>
+    async function loadPools() {
+      let normalData = [];
+      let limitedData = [];
+
+      try {
+        normalData = await fetch("poolNormal.json").then(r => r.json());
+      } catch(err) {
+        console.error("Failed to load poolNormal.json:", err);
+      }
+
+      try {
+        limitedData = await fetch("poolLimited.json").then(r => r.json());
+      } catch(err) {
+        console.error("Failed to load poolLimited.json:", err);
+      }
+
+      normalData = normalData.filter(item => !item.name.startsWith("OLD"));
+      limitedData = limitedData.filter(item => !item.name.startsWith("OLD"));
+
+      normalData.sort((a, b) => (a.category[0] || "").localeCompare(b.category[0] || ""));
+      limitedData.sort((a, b) => (a.category[0] || "").localeCompare(b.category[0] || ""));
+
+      const normalList = document.getElementById("normalPool");
+      const limitedList = document.getElementById("limitedPool");
+
+      function formatItem(item) {
+        const category = capitalize(item.category[0] || "");
+        const type = capitalize(item.type[0] || "");
+        const rerolls = item.rerolls.trim();
+        const li = document.createElement("li");
+
+        const spans = [
+          item.name.trim(),
+          category,
+          type,
+          rerolls
+        ];
+
+        spans.forEach(text => {
+          const span = document.createElement("span");
+          span.textContent = text;
+          li.appendChild(span);
+        });
+
+        return li;
+      }
+
+      normalData.forEach(item => normalList.appendChild(formatItem(item)));
+      limitedData.forEach(item => limitedList.appendChild(formatItem(item)));
+    }
+
+    function capitalize(str) {
+      if (!str) return "";
+      return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+    }
+
+    loadPools();
+  </script>
+</body>
+</html>
+

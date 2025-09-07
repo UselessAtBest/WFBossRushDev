@@ -1,0 +1,133 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+}
+
+header {
+    background: var(--card);
+    padding: 10px 20px;
+    border-bottom: 2px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+header button {
+    background: var(--card);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+header button:hover {
+    background: var(--accent);
+    color: white;
+}
+
+
+.leaderboard-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.category-column {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 20px;
+    flex: 1 1 300px;
+    min-width: 280px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.category-column h2 {
+    text-align: center;
+    margin-top: 0;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+    color: var(--accent);
+}
+
+
+.entry {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background: var(--card);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    border: 1px solid var(--border);
+}
+
+.rank {
+    flex: 0 0 10%;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.8rem;
+    margin-right: 12px;
+}
+
+
+.rank.gold { color: gold; }
+.rank.silver { color: silver; }
+.rank.bronze { color: #cd7f32; }
+
+
+.entry-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+.player-line {
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+
+.video-line a,
+.socials-line a {
+    color: var(--accent);
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.video-line a:hover,
+.socials-line a:hover {
+    text-decoration: underline;
+}
+
+.socials-line {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    font-size: 0.9rem;
+}
+
+body,
+header,
+header button,
+.category-column,
+.entry {
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Boss Rush</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <nav class="nav-left">
+      <button onclick="window.location.href='#'">Home</button>
+      <button id="aboutBtn">About</button>
+      <button onclick="window.location.href='warframebossrush.com/leaderboard'">Leaderboard</button>
+      <button id="faqBtn">FAQ</button>
+      <button id="howBtn">How To</button>
+    </nav>
+    <div class="nav-right">
+      <button id="multiRollBtn">Start SP Version</button>
+      <button class="resetbtn" id="resetBtnpopup">Reset Run</button>
+      <button id="randomBtnA" class="roll-header-btn">General Pool</button>
+      <button id="randomBtnB" class="roll-header-btn">Boss Pool</button>
+      <button id="themeToggle">🐾</button>
+
+      
+    </div>
+  </header>
+
+
+  <main class="container">
+    <!-- Boss Rolls & Free Rolls -->
+    <section class="left">
+      <!-- Boss Buttons -->
+      <div class="button-grid" id="buttonGrid"></div>
+    </section>
+
+
+
+
+    <!-- Inventory -->
+    <section class="right">
+      <div class="inventory">
+        <!-- All Tab -->
+        <div class="tabs" id="mainTabs">
+          <button data-tab="all">All</button>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="tabs" id="categoryTabs">
+          <button data-tab="warframe">Warframe</button>
+          <button data-tab="primary">Primary</button>
+          <button data-tab="secondary">Secondary</button>
+          <button data-tab="melee">Melee</button>
+        </div>
+
+        <!-- Sub-Tabs -->
+        <div class="subtabs" id="subTabs">
+        </div>
+
+        <div id="inventoryList"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="popupOverlay" class="popup-overlay">
+    <div class="popup" id="introPopup"></div>
+  </div>
+
+  <!-- Load /js/ -->
+  <script src="js/ui.js"></script>
+  <script src="js/randomizer.js"></script>
+  <script src="js/inventory.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
+
+
