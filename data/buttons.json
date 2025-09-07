@@ -3,7 +3,7 @@
     "name": "Fragmented One",
     "label": "<b> SP Only  </b>",
     "popupMessage": "",
-    "image": "../img/fragmentedone.png",
+    "image": "./img/fragmentedone.png",
     "tier": 1,
     "rolls": { "poolNormal": 5, "poolLimited": 3 },
     "class": {
@@ -17,7 +17,7 @@
     "name": "Captain Vor",
     "label": " Mercury ",
     "popupMessage": "",
-    "image": "../img/vor.png",
+    "image": "./img/vor.png",
     "tier": 1,
     "rolls": { "poolNormal": 3, "poolLimited": 1 },
     "class": {
@@ -30,7 +30,7 @@
     "name": "The Jackal",
     "label": " Venus ",
     "popupMessage": "",
-    "image": "../img/jackal.png",
+    "image": "./img/jackal.png",
     "tier": 1,
     "rolls": { "poolNormal": 3, "poolLimited": 1 },
     "class": {
@@ -43,7 +43,7 @@
     "name": "H09 Efervon",
     "label": " <b>  SP Only </b>",
     "popupMessage": "",
-    "image": "../img/h09.png",
+    "image": "./img/h09.png",
     "tier": 1,
     "rolls": { "poolNormal": 5, "poolLimited": 3 },
     "class": {
@@ -57,7 +57,7 @@
     "name": "Lech Kril",
     "label": "Mars",
     "popupMessage": "Big Beans",
-    "image": "../img/Kril.png",
+    "image": "./img/Kril.png",
     "tier": 1,
     "rolls": { "poolNormal": 3, "poolLimited": 1 },
     "class": {
@@ -70,7 +70,7 @@
     "name": "Lephantis",
     "label": " Deimos ",
     "popupMessage": "",
-    "image": "../img/lephantis.png",
+    "image": "./img/lephantis.png",
     "tier": 1,
     "rolls": { "poolNormal": 5, "poolLimited": 3 },
     "class": {
@@ -83,7 +83,7 @@
     "name": "The Sergeant",
     "label": " Phobos ",
     "popupMessage": "",
-    "image": "../img/sergeant.png",
+    "image": "./img/sergeant.png",
     "tier": 1,
     "rolls": { "poolNormal": 3, "poolLimited": 1 },
     "class": {
@@ -96,7 +96,7 @@
     "name": "Kril & Vor",
     "label": " Ceres ",
     "popupMessage": "",
-    "image": "../img/VorKril.png",
+    "image": "./img/VorKril.png",
     "tier": 1,
     "rolls": { "poolNormal": 3, "poolLimited": 1 },
     "class": {
@@ -109,7 +109,7 @@
     "name": "Salad V",
     "label": " Jupiter ",
     "popupMessage": "",
-    "image": "../img/aladv.png",
+    "image": "./img/aladv.png",
     "tier": 1,
     "rolls": { "poolNormal": 4, "poolLimited": 2 },
     "class": {
@@ -122,7 +122,7 @@
     "name": "The Raptor",
     "label": " Europa ",
     "popupMessage": "",
-    "image": "../img/raptor.png",
+    "image": "./img/raptor.png",
     "tier": 1,
     "rolls": { "poolNormal": 4, "poolLimited": 2 },
     "class": {
@@ -135,7 +135,7 @@
     "name": "Sargus Ruk",
     "label": " Saturn ",
     "popupMessage": "",
-    "image": "../img/ruk.png",
+    "image": "./img/ruk.png",
     "tier": 1,
     "rolls": { "poolNormal": 4, "poolLimited": 2 },
     "class": {
@@ -148,7 +148,7 @@
     "name": "Tyl Regor",
     "label": " Uranus ",
     "popupMessage": "",
-    "image": "../img/regor.png",
+    "image": "./img/regor.png",
     "tier": 1,
     "rolls": { "poolNormal": 5, "poolLimited": 3 },
     "class": {
@@ -161,7 +161,7 @@
     "name": "Hyena Pack",
     "label": " Neptune ",
     "popupMessage": "",
-    "image": "../img/hyena.png",
+    "image": "./img/hyena.png",
     "tier": 1,
     "rolls": { "poolNormal": 5, "poolLimited": 3 },
     "class": {
@@ -174,7 +174,7 @@
     "name": "Ambulas",
     "label": " Pluto ",
     "popupMessage": "",
-    "image": "../img/ambulas.png",
+    "image": "./img/ambulas.png",
     "tier": 1,
     "rolls": { "poolNormal": 5, "poolLimited": 3 },
      "class": {
@@ -187,7 +187,7 @@
     "name": "Kela De Thaym",
     "label": " Sedna ",
     "popupMessage": "",
-    "image": "../img/kela.png",
+    "image": "./img/kela.png",
     "tier": 1,
     "rolls": { "poolNormal": 5, "poolLimited": 3 },
     "class": {
@@ -200,7 +200,7 @@
     "name": "Zealoid Prelate",
     "label": " Deimos ",
     "popupMessage": "",
-    "image": "../img/zealoid.png",
+    "image": "./img/zealoid.png",
     "tier": 1,
     "rolls": { "poolNormal": 5, "poolLimited": 3 },
     "class": {
@@ -211,6 +211,7 @@
   }
 
 ]
+
 
 
 
