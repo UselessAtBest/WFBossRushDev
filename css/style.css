@@ -391,6 +391,8 @@ header button:hover {
   transform: scale(0.8);
   opacity: 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  overflow: auto;
+  
 }
 
 .popup.show {
@@ -580,5 +582,6 @@ header button:hover {
   from { opacity: 0.95; transform: translate(-50%, -50%); }
   to { opacity: 0; transform: translate(-50%, -40%); }
 }
+
 
 
