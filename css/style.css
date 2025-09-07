@@ -15,7 +15,6 @@
   --themebtnhoverborder: #fff;
   --refundhover: #9E4B64;
   --refund: #FA789F;
-
 }
 
 :root.dark-mode {
@@ -55,9 +54,6 @@
   --refund: #7844e0;
   --refundhover: #4d2a92;
 }
-
-
-
 
 * {
   box-sizing: border-box;
@@ -109,13 +105,10 @@ header button {
   color: #fff;
 }
 
-
 .resetbtn {
   background-color: rgb(169, 0, 0);
   border-color: rgb(75, 3, 3);
 }
-
-
 
 header button:hover {
   background: var(--accent);
@@ -165,6 +158,9 @@ header button:hover {
   transition: background 0.2s, opacity 0.2s, transform 0.1s;
   white-space: normal;
   word-wrap: break-word;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
 .button-grid button:hover:not(:disabled) {
@@ -176,6 +172,25 @@ header button:hover {
 .button-grid button:disabled {
   opacity: 0.4;
   cursor: not-allowed;
+}
+
+.button-grid button img.button-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.button-grid button .button-name,
+.button-grid button .button-label {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+  text-align: center;
+  color: white;
 }
 
 .randomizer-controls {
@@ -291,8 +306,8 @@ header button:hover {
 
 #inventoryList div {
   background: var(--card);
-  margin-bottom: 4px;  
-  padding: 0px;       
+  margin-bottom: 4px;
+  padding: 0px;
   border-radius: 6px;
 }
 
@@ -300,7 +315,7 @@ header button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 0px;   
+  padding: 0px 0px;
   border-bottom: 1px solid var(--border);
 }
 
@@ -382,7 +397,7 @@ header button:hover {
   background: var(--card);
   padding: 20px;
   border-radius: 50px;
-  border-color:#401D87;
+  border-color: #401D87;
   border-width: 5px;
   max-width: 800px;
   text-align: center;
@@ -438,8 +453,6 @@ header button:hover {
 .multi-roll-popup .roll-list li {
   padding: 6px 0;
 }
-
-.general-pool
 
 .multi-roll-popup .roll-separator {
   border: 0;
@@ -514,35 +527,6 @@ header button:hover {
   background: #6541A5;
 }
 
-
-
-.button-grid button {
-  position: relative;
-  overflow: hidden;       
-  border-radius: 12px;    
-  padding: 0;             
-}
-
-
-.button-grid button img.button-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;      
-  z-index: 0;            
-}
-
-.button-grid button .button-name,
-.button-grid button .button-label {
-  position: relative;
-  z-index: 1;
-  pointer-events: none;   
-  text-align: center;
-  color: white;           
-}
-
 @keyframes slideFadeIn {
   0% {
     opacity: 0;
@@ -581,4 +565,87 @@ header button:hover {
   to { opacity: 0; transform: translate(-50%, -40%); }
 }
 
+/* ---------------------------
+   Responsive Adjustments
+--------------------------- */
 
+/* Tablets and smaller laptops */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    flex: none;
+    width: 100%;
+    min-height: auto;
+    border: none;
+  }
+
+  .right {
+    border-top: 2px solid var(--border);
+  }
+
+  .button-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+  }
+
+  .roll-buttons {
+    flex-direction: column;
+  }
+
+  .roll-buttons button {
+    width: 100%;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  header button {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+
+  .button-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .button-grid button {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  .roll-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .roll-buttons button {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  .inventory {
+    font-size: 0.85rem;
+  }
+
+  .popup {
+    max-width: 90vw;
+    padding: 15px;
+    border-radius: 20px;
+  }
+}
