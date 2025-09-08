@@ -9,24 +9,28 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <header>
-    <nav class="nav-left">
-      <button onclick="window.location.href='#'">Home</button>
-      <button id="aboutBtn">About</button>
-      <button onclick="window.location.href='./leaderboard'">Leaderboard</button>
-      <button id="faqBtn">FAQ</button>
-      <button id="howBtn">How To</button>
-    </nav>
-    <div class="nav-right">
-      <button id="multiRollBtn">Start SP Version</button>
-      <button class="resetbtn" id="resetBtnpopup">Reset Run</button>
-      <button id="randomBtnA" class="roll-header-btn">General Pool</button>
-      <button id="randomBtnB" class="roll-header-btn">Boss Pool</button>
-      <button id="themeToggle">🐾</button>
+<header>
+  <!-- Hamburger always visible on mobile -->
+  <button class="nav-toggle" id="navToggle">☰</button>
 
-      
-    </div>
-  </header>
+  <div class="nav-container">
+    <ul>
+      <li><button onclick="window.location.href='#'">Home</button></li>
+      <li><button id="aboutBtn">About</button></li>
+      <li><button onclick="window.location.href='./leaderboard'">Leaderboard</button></li>
+      <li><button id="faqBtn">FAQ</button></li>
+      <li><button id="howBtn">How To</button></li>
+    </ul>
+    <ul>
+      <li><button id="multiRollBtn">Start SP Version</button></li>
+      <li><button class="resetbtn" id="resetBtnpopup">Reset Run</button></li>
+      <li><button id="randomBtnA" class="roll-header-btn">General Pool</button></li>
+      <li><button id="randomBtnB" class="roll-header-btn">Boss Pool</button></li>
+      <li><button id="themeToggle">🐾</button></li>
+    </ul>
+  </div>
+</header>
+
 
 
   <main class="container">
