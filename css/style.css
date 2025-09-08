@@ -381,21 +381,23 @@ header button:hover {
 .popup {
   display: flex;
   flex-direction: column;
-  background: var(--card);
-  padding: 20px;
-  border-radius: 50px;
-  border-color:#401D87;
-  border-width: 5px;
-  max-width: 800px;
-  text-align: center;
+  max-width: 50vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  padding: 1vh 1vw;
   border: 1px solid var(--border);
+  border-radius: 2rem;
+  background: var(--card);
   box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  text-align: center;
   transform: scale(0.8);
   opacity: 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  font-size: clamp(0.5rem, 2vw, 0.9rem);
   overflow: auto;
-  
 }
+
 
 .popup.show {
   transform: scale(1);
@@ -584,6 +586,7 @@ header button:hover {
   from { opacity: 0.95; transform: translate(-50%, -50%); }
   to { opacity: 0; transform: translate(-50%, -40%); }
 }
+
 
 
 
