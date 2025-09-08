@@ -379,6 +379,8 @@ header button:hover {
 }
 
 .popup {
+  display: flex;
+  flex-direction: column;
   background: var(--card);
   padding: 20px;
   border-radius: 50px;
@@ -582,6 +584,7 @@ header button:hover {
   from { opacity: 0.95; transform: translate(-50%, -50%); }
   to { opacity: 0; transform: translate(-50%, -40%); }
 }
+
 
 
 
