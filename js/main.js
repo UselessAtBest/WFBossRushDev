@@ -168,5 +168,20 @@ if (resetBtnpopup) resetBtnpopup.addEventListener("click", e => {
   });
 });
 
+const navToggle = document.getElementById("navToggle");
+const navContainer = document.querySelector(".nav-container");
+const navButtons = navContainer.querySelectorAll("button");
+
+// Toggle menu when hamburger is clicked
+navToggle.addEventListener("click", () => {
+  navContainer.classList.toggle("show");
+});
+
+// Close menu when any nav button is clicked
+navButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    navContainer.classList.remove("show");
+  });
+});
 
 });
