@@ -587,6 +587,22 @@ header button:hover {
   to { opacity: 0; transform: translate(-50%, -40%); }
 }
 
+  .question {
+    font-weight: bold;
+    color: var(--accent);
+    margin-top: 1rem;
+  }
+
+  .answer {
+    margin-left: 1rem;
+    color: var(--text);
+  }
+
+
+ h2 {
+    color: var(--accent);
+    text-decoration: underline;
+  }
 
 
 
