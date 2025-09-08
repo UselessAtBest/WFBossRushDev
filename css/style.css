@@ -74,12 +74,14 @@ body {
 }
 
 header {
+  display: flex;
   background: var(--card);
   padding: 10px 20px;
   border-bottom: 2px solid var(--border);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 header h1 {
@@ -398,7 +400,6 @@ header button:hover {
   overflow: auto;
 }
 
-
 .popup.show {
   transform: scale(1);
   opacity: 1;
@@ -497,6 +498,7 @@ header button:hover {
   justify-content: center;
   align-items: center;
   padding: 10px;
+    border: var(--accent);
 }
 
 .popup.intro-popup p,
@@ -587,6 +589,8 @@ header button:hover {
   to { opacity: 0; transform: translate(-50%, -40%); }
 }
 
+
+
   .question {
     font-weight: bold;
     color: var(--accent);
@@ -607,3 +611,86 @@ header button:hover {
 
 
 
+/* Hide hamburger by default (desktop) */
+.nav-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001; /* keep it on top of menu */
+}
+
+.nav-container {
+  display: flex;
+  flex: 1;
+  justify-content: space-between; /* keeps nav-left on left, nav-right on right */
+  align-items: center;
+}
+
+.nav-container ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-container button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.nav-toggle {
+  display: none; /* hidden on desktop */
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ===== Mobile (overlay) ===== */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block; /* show hamburger */
+    position: relative;
+    z-index: 1001;
+  }
+
+  .nav-container {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg);
+    z-index: 1000;
+  }
+
+  .nav-container.show {
+    display: flex; /* show overlay */
+  }
+
+  .nav-container ul {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .nav-container button {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--text);
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .nav-container button:hover {
+    background: var(--bg);
+  }
+}
