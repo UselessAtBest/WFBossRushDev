@@ -13,6 +13,20 @@
     },
     "sp": true
   },
+    {
+    "name": "New Boss1",
+    "label": "<b> test  </b>",
+    "popupMessage": "",
+    "image": "./img/fragmentedone.png",
+    "tier": 1,
+    "rolls": { "poolNormal": 5, "poolLimited": 3 },
+    "class": {
+      "button": ["tier-1-btn"],
+      "label": ["tier-1-label"],
+      "text": ["tier-1-popup"]
+    },
+    "sp": true
+  },
   {
     "name": "Captain Vor",
     "label": " Mercury ",
@@ -211,6 +225,7 @@
   }
 
 ]
+
 
 
 
