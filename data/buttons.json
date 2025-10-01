@@ -24,7 +24,7 @@
       "button": ["tier-1-btn"],
       "label": ["tier-1-label"],
       "text": ["tier-1-popup"]
-    },
+    }
   },
   {
     "name": "Captain Vor",
@@ -224,6 +224,7 @@
   }
 
 ]
+
 
 
 
