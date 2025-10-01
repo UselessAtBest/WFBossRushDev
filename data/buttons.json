@@ -14,10 +14,10 @@
     "sp": true
   },
     {
-    "name": "New Boss1",
+    "name": "Vay Hek",
     "label": "<b> test  </b>",
     "popupMessage": "",
-    "image": "./img/fragmentedone.png",
+    "image": "./img/VayHekPortrait.png",
     "tier": 1,
     "rolls": { "poolNormal": 5, "poolLimited": 3 },
     "class": {
@@ -25,7 +25,6 @@
       "label": ["tier-1-label"],
       "text": ["tier-1-popup"]
     },
-    "sp": true
   },
   {
     "name": "Captain Vor",
@@ -225,6 +224,7 @@
   }
 
 ]
+
 
 
 
